@@ -500,6 +500,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* opacity: 0;
+    visibility: hidden;
+    pointer-events: none; */
 }
 
 .modal-window {
@@ -593,11 +596,14 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-color: #4D5AE5;
 }
 
+.input-icon-container {
+    position: relative;
+}
 .modal-icon {
     position: absolute;
+    transform: translateY(-50%);
     left: 16px;
     top: 50%;
-    transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
  .modal-input:focus ~ .modal-icon {
@@ -619,16 +625,19 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 4px;
     background-color: transparent;
     resize: none;
+    outline-style: none ;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  
  .modal-textarea:focus {
+
     border-color: #4D5AE5;
  }
  
  .input-user-privacy {
     visibility: hidden;
+    position: absolute;
  }
 
  .label-user-privacy {
@@ -650,7 +659,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     justify-content: center;
     fill: transparent;
  }
- input[type="checkbox"]:checked ~ .label-accent {
+ .input-user-privacy:checked + .label-user-privacy .label-accent {
     background-color:#404bbf;
     border: none;
     fill: #F4F4FD;
@@ -671,4 +680,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
-
+.form-btn:focus,
+.form-btn:hover {
+    background-color: #404BBF;
+ }
