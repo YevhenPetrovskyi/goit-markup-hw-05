@@ -551,18 +551,13 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);   
 }
 
-.close-icon:hover,
-.close-icon:focus {
-    fill: #FFFFFF;
-}
-
-/* .modal-close-btn:hover .close-icon{
+.modal-close-btn:hover .close-icon{
     fill: #ffffff;
 }
 
 .modal-close-btn:focus .close-icon {
     fill: #ffffff;
-} */
+}
 
 .modal-subtitle {
     text-align: center;
